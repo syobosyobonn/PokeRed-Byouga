@@ -1,5 +1,5 @@
 body {
-    padding-top: 40px; /* ヘッダーの高さ分の余白をいれ、うしろの要素が隠れないようにする */
+    padding-top: 40px; 
     background-color: #003d6c;
 }
 a{
@@ -7,7 +7,7 @@ a{
 }
 
 header {
-    position: fixed; /*** ← fixedで固定 ***/
+    position: fixed;
     width: 100%; 
     height: 40px; 
     background: #015c07; 
@@ -43,13 +43,13 @@ header h1{
 }
 
 #Top{
-    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
-    height: 100vh;/*高さを全画面にあわせる*/
+    position: relative;
+    height: 100vh;
 } 
 
 #video-area{
     position: fixed;
-    z-index: -1;/*最背面に設定*/
+    z-index: -1;
     top: 0;
     right:0;
     left:0;
@@ -80,7 +80,7 @@ header h1{
     z-index: 0;
 }
 
-#content{
+.content{
     align-items: center;
     background-color: #ffffff8e;
     width: 1000px;
@@ -91,4 +91,48 @@ header h1{
     padding-bottom: 30px;
     border-radius:  20px;
     text-shadow: 0 0 10px #fff;
+}
+
+/**/
+
+.code{
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2.5%;
+    width: 800px;
+    line-height: 4px;
+    position: relative;;
+    background-color: #ffffff55;
+    border-radius:  20px;
+}
+
+.list{
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2.5%;
+    width: 800px;
+    background-color: #ffffff55;
+    border-radius:  20px;
+}
+
+.red{
+    color: firebrick;
+    text-shadow: 0 0 1px firebrick;
+}
+
+.green{
+    color: darkgreen;
+    text-shadow: 0 0 1px darkgreen;
+}
+
+.hilight{
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2.5%;
+    width: 800px;
+    background-color: #ffffff55;
+    border-radius:  20px;
 }

@@ -12,13 +12,106 @@
         <nav class="nav">
             <ul class="menu">
                 <li><a href="./index.html">ProgramCode&PatchCode</a></li>
-                <li><a href="./how-to-use.html">How to Use?</a></li>
-                <li><a href="">VertionInfo</a></li>
+                <li><a href="../how-to-use.html">How to Use?</a></li>
+                <li><a href="../Ver-info.html">VertionInfo</a></li>
             </ul>
         </nav>
     </header>
-    <div id="content">
-        
+    <div class="content">
+        <div class="code">
+            <p><b>重要:DA00から書くことを推奨します。</b></p>
+            <p><b>　　 また、パッチを当てる位置、アセンブリのコードはDA00から書いていることを前提に書きます。</b></p>
+        </div>
+        <h1>Main Code</h1>
+        <div class="code">
+            <p>CD/67/01/01/10/00/21/C0/96/3E/FF/22/0B/78/B1/20</p>
+            <p>F8/01/10/00/21/F0/87/3E/00/22/0B/78/B1/20/F8/CD</p>
+            <p>81/01/01/68/01/21/A0/C3/3E/7F/22/0B/78/B1/20/F8</p>
+            <p>21/A0/C3/CD/67/38/F0/B3/CB/5F/28/01/C9/CB/47/28</p>
+            <p>06/47/3E/7F/22/18/EC/CB/4F/28/06/47/3E/6C/22/18</p>
+            <p>E2/CB/57/28/02/18/D9/18/DA/C9</p>
+        </div>
+        <h1>Main Code/No punctuation</h1>
+        <div class="code">
+            <p>CD670101100021C0963EFF220B78B120</p>
+            <p>F801100021F0873E00220B78B120F8CD</p>
+            <p>810101680121A0C33E7F220B78B120F8</p>
+            <p>21A0C3CD6738F0B3CB5F2801C9CB4728</p>
+            <p>06473E7F2218ECCB4F2806473E6C2218</p>
+            <p>E2CB57280218D918DAC9</p>
+        </div>
+        <h1>Main Code/Z80 Code</h1>
+        <div class="code">
+            <p>call 0167</p>
+            <p>ld   bc,0010</p>
+            <p>ld   hl,96C0</p>
+            <p>ld   a,FF</p>
+            <p>ldi  (hl),a</p>
+            <p>dec  bc</p>
+            <p>ld   a,b</p>
+            <p>or   c</p>
+            <p>jr   nz,DA09</p>
+            <p>ld   bc,0010</p>
+            <p>ld   hl,87F0</p>
+            <p>ld   a,00</p>
+            <p>ldi  (hl),a</p>
+            <p>dec  bc</p>
+            <p>ld   a,b</p>
+            <p>or   c</p>
+            <p>jr   nz,DA17</p>
+            <p>call 0181</p>
+            <p>ld   bc,0168</p>
+            <p>ld   hl,C3A0</p>
+            <p>ld   a,7F</p>
+            <p>ldi  (hl),a</p>
+            <p>dec  bc</p>
+            <p>ld   a,b</p>
+            <p>or   c</p>
+            <p>jr   nz,DA28</p>
+            <p>ld   hl,C3A0</p>
+            <p>call 3867</p>
+            <p>ld   a,(ff00+B3)</p>
+            <p>bit  3,a</p>
+            <p>jr   z,DA3D</p>
+            <p>ret  </p>
+            <p>bit  0,a</p>
+            <p>jr   z,DA47</p>
+            <p>ld   b,a</p>
+            <p>ld   a,7F</p>
+            <p>ldi  (hl),a</p>
+            <p>jr   DA33</p>
+            <p>bit  1,a</p>
+            <p>jr   z,DA51</p>
+            <p>ld   b,a</p>
+            <p>ld   a,6C</p>
+            <p>ldi  (hl),a</p>
+            <p>jr   DA33</p>
+            <p>bit  2,a</p>
+            <p>jr   z,DA57</p>
+            <p>jr   DA30</p>
+            <p>jr   DA33</p>
+            <p>ret</p>
+        </div>
+        <h2>Patch</h2>
+        <ul class="list">
+            <li><a href="./01.html">パッチⅠ      ───────安全装置</a></li>
+            <li><a href="./02.html">パッチⅡ      ───────左右で描画場所を変更</a></li>
+            <li><a href="./03.html">パッチⅢ      ───────描画場所を表示</a></li>
+            <li><a href="./02p.html">パッチⅡPlus!!─────β,下キーでも描画場所を変更</a></li>
+        </ul>
+        <h2>Patch's table</h2>
+        <ul class="list">
+            <li class="green">Ⅰ  Only───────(`・ω・´)</li>
+            <li class="green">Ⅱ  Only───────(`・ω・´)</li>
+            <li class="green">Ⅲ  Only───────(`・ω・´)</li>
+            <li class="red">ⅡP Only────── (´・ω・`)</li>
+            <li class="green">ⅠAndⅡ───────(`・ω・´)</li>
+            <li class="red">ⅠAndⅡP────── (´・ω・`)</li>
+            <li class="green">ⅠAndⅢ───────(`・ω・´)</li>
+            <li class="green">ⅡAndⅡP────── (`・ω・´)</li>
+            <li class="red">ⅡAndⅢ───────(´・ω・`)</li>
+            <li class="red">ⅢAndⅡP────── (´・ω・`)</li>
+        </ul>
     </div>
 </body>
 </html>
